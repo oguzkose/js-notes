@@ -69,7 +69,7 @@ stringNumber=parseFloat(stringNumber)
 console.log(typeof(stringNumber))
 ```
 - Sayısal bir ifade toString() metotu ile string tipine dönüştürülebilir
-```Js
+```JS
 let number = 15
 number = number.toString()
 console.log(typeof(number)
