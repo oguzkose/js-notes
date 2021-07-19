@@ -82,3 +82,36 @@ let message = `Merhaba ${username} Hoşgeldin`
 console.log(message)
 //Output: Merhaba Oguz Hoşgeldin
 ``` 
+## String veri türü işlemleri
+- length , search() , toUpperCase() , toLowerCase() , slice(numb) , slice(numb,numb2) , indexOf() , lastIndexOf() , replace() , includes() , startsWith() , endsWith()
+```JS
+let userName = "Oguz"
+let email= "oguz@info.com"
+
+console.log(userName.length) //stringin karakter sayısı kaç?
+
+console.log (email.search("@")) // "@" hangi indexte?
+
+console.log(userName.toUpperCase()) //Büyük harfe çevir
+
+console.log(userName.toLowerCase()) //Küçük harfe çevir
+
+console.log(userName[3]) // [3] index numaralı karakter hangisi
+
+console.log(email.slice(4)) //[4] ve sonrasını al
+
+console.log(email.slice(0,9)) //[0] ve [9] aralığı al. [9] Dahil değil
+
+console.log(userName.indexOf('u')) // u Harfi ilk hangi indexte?
+console.log(email.lastIndexOf("o")) // o Harfi en son hangi indexte?
+
+newEmail=email.replace('info.com','gmail.com') // info.com kısmını gmail.com ile değiştir
+console.log(newEmail)
+
+doesItContain = newEmail.includes('gmail') // içeriyor mu?
+console.log(doesItContain);                
+
+console.log(email.startsWith("oguz")) // bununla mı başlıyor
+
+console.log(email.endsWith("@info.com")) // bununla mı bitiyor
+``` 
