@@ -1,6 +1,8 @@
 ## Let kullanımı
-* Let keyword'unu kullanarak herhangi bir tipte değişken atayabilirim
-```Js
+
+- Let keyword'unu kullanarak herhangi bir tipte değişken atayabilirim
+
+```JS
 let fullName;
 fullName="Oğuz";
 fullName+=" Köse";
@@ -10,8 +12,11 @@ let city ="Istanbul" , district="Kadikoy";
 console.log(city + " " + district)
 
 ```
-## Const     kullanımı
+
+## Const kullanımı
+
 - Const keyword'u sabit bir veriyi tanımlamak için kullanılır.tanımlandıktan sonra değiştirilemez.
+
 ```JS
 const PI = 3.14;
 console.log(PI);
@@ -22,7 +27,9 @@ const contact = {
 }
 console.log(contact.contactName + " " + contact.numbers);
 ```
+
 ## Matematiksel işlemler
+
 ```JS
 let number = 5
 number++                //++ ifadesi 1 artırır
@@ -31,7 +38,7 @@ console.log(number)     // Output 6
 number--                //-- ifadesi 1 azaltır
 console.log(number)     // Output 5
 
-let kalan =number%2     // % ifadesi mod alır 
+let kalan =number%2     // % ifadesi mod alır
 console.log(kalan)      // Output 1
 
 console.log(number**3)  // ** ifadesi ile üstel işlemler yapılır
@@ -47,7 +54,9 @@ console.log(newNumber)              //Output: string 11
 console.log(Number(newNumber))      //Output: int 11
 
 ```
+
 ## Tip Dönüşümleri
+
 - Bir değişkene atanmış değerin tipini öğrenmek için typeof kıllanılır
 
 ```JS
@@ -57,33 +66,44 @@ console.log(typeof(firstName))      //Output: string
 ```
 
 - String bir ifade parsInt() metotu ile number tipine dönüştürülebilir
+
 ```JS
 let stringNumber = "15"
 stringNumber= parseInt(stringNumber)
 console.log(typeof(stringNumber))
 ```
+
 - String bir ifade parsFloat() metotu ile number tipine dönüştürülebilir
+
 ```JS
 let stringNumber= "3.14"
 stringNumber=parseFloat(stringNumber)
 console.log(typeof(stringNumber))
 ```
+
 - Sayısal bir ifade toString() metotu ile string tipine dönüştürülebilir
+
 ```JS
 let number = 15
 number = number.toString()
 console.log(typeof(number)
 ```
+
 ## Template Literals
+
 - backtick'ler arasında ${} kullanarak, değer atanmış değişkenlerin ismini yazabilirim
+
 ```JS
 let username ="Oguz"
 let message = `Merhaba ${username} Hoşgeldin`
 console.log(message)
 //Output: Merhaba Oguz Hoşgeldin
-``` 
+```
+
 ## String veri türü işlemleri
+
 - length , search() , toUpperCase() , toLowerCase() , slice(numb) , slice(numb,numb2) , indexOf() , lastIndexOf() , replace() , includes() , startsWith() , endsWith()
+
 ```JS
 let userName = "Oguz"
 let email= "oguz@info.com"
@@ -109,9 +129,157 @@ newEmail=email.replace('info.com','gmail.com') // info.com kısmını gmail.com 
 console.log(newEmail)
 
 doesItContain = newEmail.includes('gmail') // içeriyor mu?
-console.log(doesItContain);                
+console.log(doesItContain);
 
 console.log(email.startsWith("oguz")) // bununla mı başlıyor
 
 console.log(email.endsWith("@info.com")) // bununla mı bitiyor
-``` 
+```
+
+## DOM(Document Object Model) Manipulation
+
+- getElementById() metotu ile Id'ye göre element seçip manipule edilebilir
+
+Html
+
+```Html
+    <h2 id="title">Hello World</h2>
+```
+
+Js
+
+```JS
+    let header = document.getElementById('title')
+    header.innerHTML="Hello Humanity"
+```
+
+- QuerySelector ile element seçebilirim
+
+Html
+
+```Html
+   <ul id="unordered">
+        <li>Lorem, ipsum.</li>
+        <li>Lorem, ipsum.</li>
+        <li id="link" >
+            <a href="https://www.google.com" target="_blank">Link</a>
+        </li>
+    </ul>
+```
+
+Js
+
+```JS
+    let link = document.querySelector("ul#unordered>li#link>a")//id'si unordered olan ul'nin içindeki , id'si link-item olan li'nin içindeki a elementini seçer.
+    link.innerHTML="Google" //seçilen elementin "Link" olan değerini "Google" yapar.
+```
+
+- Listenin ilk ve son elemanını bulma (first-child , last-child)
+
+Html
+
+```Html
+    <ol>
+        <li>Lorem.</li>
+        <li>Tenetur?</li>
+        <li>Consequuntur!</li>
+    </ol>
+```
+
+Js
+
+```JS
+
+    let firstList=document.querySelector("ol>li:first-child")
+    console.log(firstList.innerHTML) //Output : lorem.
+
+    let lastList=document.querySelector("ol>li:last-child")
+    console.log(lastList.innerHTML) //Output : Consequuntur!
+
+```
+
+- CreateElement() ve Append() ile Listeye eleman ekleme
+
+Html
+
+```Html
+    <ol>
+        <li>Lorem.</li>
+        <li>Tenetur?</li>
+        <li>Consequuntur!</li>
+    </ol>
+```
+
+Js
+
+```JS
+    let orderList = document.querySelector("ol")
+
+    let createList = document.createElement("li")
+    createList.innerHTML="yeni eklenen liste elemanı"
+
+    orderList.append(createList)
+
+    console.log(orderList)
+```
+
+- DOM'a add() ve remove() ile class ekleyip, silme
+
+Html
+
+```HTML
+    <h3>Class ekleme ve silme</h3>
+```
+
+Js
+
+```JS
+    let header = document.querySelector("h3")
+    header.classList.add("text-blue","title") //Class ekleme
+    console.log(header.classList)
+
+    header.classList.remove("text-blue")      //Class silme
+    console.log(header.classList)
+```
+
+## If-Else
+
+Js
+
+```JS
+
+    let userName = prompt("Kullanıcı adınızı yazınız");
+    if(userName.length>0){console.log(userName)} //koşul uygunsa bunu yap
+    else{console.log("Kullanıcı ismi girilmedi")}//diğer durumlarda ise bunu yap
+```
+
+## Switch-Case
+
+Js
+
+```JS
+let weatherForecast = prompt("Hava nasıl?")
+switch (weatherForecast) {
+    case "güneşli":
+        console.log("T-Shirt giy")
+        break;
+    case "yağmurlu":
+        console.log("yağmurluk al")
+        break
+    default:
+        console.log(`${weatherForecast.toString()}? Bende böyle bi bilgi yok`)
+        break;
+}
+```
+
+## Ternary Operator ile short if kullanımı
+
+- condition ? true olma durumu : false olma durumu
+
+```JS
+    let userName = prompt("Kullanıcı adınızı yazınız")
+
+    userName.length>0 
+    ? console.log(`Hoşgeldin ${userName}`)
+    : console.log   ("tanıyamadım")
+```

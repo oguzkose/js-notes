@@ -6,7 +6,6 @@
 // let city ="Istanbul" , district="Kadikoy";
 // console.log(city + " " + district)
 
-
 // const SERVER_PASSWORD = "lsdlmv5s23sdk5";
 // console.log(SERVER_PASSWORD);
 
@@ -28,8 +27,6 @@
 
 // let kalan = number%2
 // console.log(kalan)
-
- 
 
 // console.log(number**3)
 
@@ -90,6 +87,55 @@
 
 //doesItContain = newEmail.includes('gmail') // içeriyor mu?
 //console.log(doesItContain);
-                
+
 //console.log(email.startsWith("oguz")) // bununla mı başlıyor
 //console.log(email.endsWith("@info.com")) // bununla mı bitiyor
+
+// let header = document.getElementById('title')
+// header.innerHTML="Hello Humanity"
+
+// let link = document.querySelector("ul#unordered>li#link-item>a")
+// link.innerHTML="Google"
+
+// let firstList=document.querySelector("ol>li:first-child")
+// console.log(firstList.innerHTML)
+
+// let lastList=document.querySelector("ol>li:last-child")
+// console.log(lastList.innerHTML)
+
+// let orderList = document.querySelector("ol")
+// let createList = document.createElement("li")
+// createList.innerHTML="yeni eklenen liste elemanı"
+// orderList.append(createList)
+// console.log(orderList)
+
+// let header = document.querySelector("h3")
+// header.classList.add("text-blue","title")
+// console.log(header.classList)
+
+// header.classList.remove("text-blue")
+// console.log(header.classList)
+
+// let userName = prompt("Kullanıcı adınızı yazınız");
+// if(userName.length>0){console.log(userName)}
+// else{console.log("Kullanıcı ismi girilmedi")}
+
+// ***************SWİTCH-CASE*******************
+// let weatherForecast = prompt("Hava nasıl?")
+// switch (weatherForecast) {
+//     case "güneşli":
+//         console.log("T-Shirt giy")
+//         break;
+//     case "yağmurlu":
+//         console.log("yağmurluk al")
+//         break
+//     default:
+//         console.log(`${weatherForecast.toString()}? Bende böyle bi bilgi yok`)
+//         break;
+// }
+
+let userName = prompt("Kullanıcı adınızı yazınız");
+
+userName.length > 0
+  ? console.log(`Hoşgeldin ${userName}`)
+  : console.log("tanıyamadım");
