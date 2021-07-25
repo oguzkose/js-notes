@@ -149,27 +149,34 @@
 // console.log(calculateCircleArea(3))
 //******************Arrow Function********************* */
 
-const sayHello = (firstName) => { console.log(`Merhaba ${firstName}`) }
-sayHello("Oğuz")
+// const sayHello = (firstName) => { console.log(`Merhaba ${firstName}`) }
+// sayHello("Oğuz")
 
-const sayHello2 = firstName => console.log(`Merhaba ${firstName}`)
-sayHello2("Oğuz")
+// const sayHello2 = firstName => console.log(`Merhaba ${firstName}`)
+// sayHello2("Oğuz")
 
-const sayHello3 = (firstName,lastname)=>
-{
-  var info = console.log(`Merhaba ${firstName} ${lastname}`) 
-  console.log(`Merhaba ${firstName} ${lastname}`) 
+// const sayHello3 = (firstName,lastname)=>
+// {
+//   var info = console.log(`Merhaba ${firstName} ${lastname}`)
+//   console.log(`Merhaba ${firstName} ${lastname}`)
+// }
+// sayHello3("Oğuz","Köse")
+
+//**********************Events*******************/
+
+// let events = document.querySelector("#events") //ID'si events olan elemanı yakaladım
+// events.addEventListener("click",domClick)//click event'i ve fonksiyon atadım
+// function domClick()
+// {
+//   console.log("Tıklandı")
+// }
+
+let button = document.querySelector("#button");
+button.addEventListener("click", clickButton);
+
+function clickButton() {
+  console.log("Butona Tıklandı");
+  this.style.color == "blue"
+    ? (this.style.color = "red")
+    : (this.style.color = "blue");
 }
-sayHello3("Oğuz","Köse")
-
-
-
-
-
-
-
-
-
-
-
-
