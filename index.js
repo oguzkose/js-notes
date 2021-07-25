@@ -134,8 +134,42 @@
 //         break;
 // }
 
-let userName = prompt("Kullanıcı adınızı yazınız");
+// let userName = prompt("Kullanıcı adınızı yazınız");
 
-userName.length > 0
-  ? console.log(`Hoşgeldin ${userName}`)
-  : console.log("tanıyamadım");
+// userName.length > 0
+//   ? console.log(`Hoşgeldin ${userName}`)
+//   : console.log("tanıyamadım");
+
+// **************Functions************************
+// function calculateCircleArea(r, PI = 3.14) {
+//   var area = PI * r * r;
+//   return area;
+// }
+
+// console.log(calculateCircleArea(3))
+//******************Arrow Function********************* */
+
+const sayHello = (firstName) => { console.log(`Merhaba ${firstName}`) }
+sayHello("Oğuz")
+
+const sayHello2 = firstName => console.log(`Merhaba ${firstName}`)
+sayHello2("Oğuz")
+
+const sayHello3 = (firstName,lastname)=>
+{
+  var info = console.log(`Merhaba ${firstName} ${lastname}`) 
+  console.log(`Merhaba ${firstName} ${lastname}`) 
+}
+sayHello3("Oğuz","Köse")
+
+
+
+
+
+
+
+
+
+
+
+

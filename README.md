@@ -279,7 +279,47 @@ switch (weatherForecast) {
 ```JS
     let userName = prompt("Kullanıcı adınızı yazınız")
 
-    userName.length>0 
+    userName.length>0
     ? console.log(`Hoşgeldin ${userName}`)
     : console.log   ("tanıyamadım")
+```
+
+## Functions
+
+- Fonksiyonlar parametre alan , almayan ,Değer döndüren ,döndürmeyen olarak ayrılırlar
+
+Js
+
+```JS
+    function calculateCircleArea(r, PI = 3.14) {
+        var area = PI * r * r;
+        return area;
+    }
+
+    console.log(calculateCircleArea(3)) //Output : 28.259999999999998
+
+```
+
+## Arrow Function
+
+- const ile birlikte fonksiyonun adı + parametresi + fat Arrow işareti(=>) + fonksiyonun gövdesi şeklinde yazılır. Eğer fonksiyon birden çok parametreye sahipse parantez içinde virgülle ayırarak yazılır. Gövdesinde birden çok işlem yapılacaksa süslü parantez mecburidir.
+
+```JS
+    //V1
+    const sayHello = (firstName) =>
+    { console.log(`Merhaba ${firstName}`) }
+    sayHello("Oğuz")
+
+    //V2
+    const sayHello2 = firstName =>
+    console.log(`Merhaba ${firstName}`)
+    sayHello2("Oğuz")
+    
+    //V3
+    const sayHello3 = (firstName,lastname) =>
+    {
+      var info = console.log(`Merhaba ${firstName} ${lastname}`)
+      console.log(`Merhaba ${firstName} ${lastname}`)
+    }
+    sayHello3("Oğuz","Köse")
 ```
