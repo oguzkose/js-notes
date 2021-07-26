@@ -347,3 +347,35 @@ Js
         : (this.style.color = "blue");
     }
 ```
+
+## Local Storage
+
+- Tarayıcıda önemli olmayan verileri saklamaya yarar
+
+```JS
+    localStorage.setItem("Car","Volvo") //setItem ile key ve value verilip local storage set edilir
+    let localStorageKey=localStorage.getItem("Car") // getItem ile çağırılır
+    console.log(localStorageKey) //Output: Value
+    localStorage.removeItem("Car") // removeItem ile key ismi verilerek storage     silinebilir
+
+```
+- Local Storage object'ini JSON.stringify() ile string yapıya ve JSON.parse() ile string yapıdan Json yapısına çevirme
+
+```JS
+    let user = { name: "Oğuz", surname: "Köse", isActive: true };
+
+    localStorage.setItem("userLocalStorage",user) //local storage set edildi
+
+    console.log(localStorage.getItem("userLocalStorage")) // Output:[object    Object]
+
+    localStorage.setItem("userLocalStorage",JSON.stringify(user)) //Object tipi stringify edildi
+
+    console.log(localStorage.getItem("userLocalStorage")) // Output:    {"name":"Oğuz","surname":"Köse","isActive":true}
+
+    let userInfo = localStorage.getItem("userLocalStorage")
+    
+    userInfo= JSON.parse(userInfo) // userInfo Parse edildi
+    
+    console.log(userInfo) // Output: {name: "Oğuz", surname: "Köse", isActive: true}
+
+```

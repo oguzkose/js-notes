@@ -171,12 +171,33 @@
 //   console.log("Tıklandı")
 // }
 
-let button = document.querySelector("#button");
-button.addEventListener("click", clickButton);
+// let button = document.querySelector("#button");
+// button.addEventListener("click", clickButton);
 
-function clickButton() {
-  console.log("Butona Tıklandı");
-  this.style.color == "blue"
-    ? (this.style.color = "red")
-    : (this.style.color = "blue");
-}
+// function clickButton() {
+//   console.log("Butona Tıklandı");
+//   this.style.color == "blue"
+//     ? (this.style.color = "red")
+//     : (this.style.color = "blue");
+// }
+
+//**************Local Storage ****************/
+// localStorage.setItem("Car","Volvo") //setItem ile key ve value verilip local storage set edilir
+// let localStorageKey=localStorage.getItem("Car") // getItem ile çağırılır
+// console.log(localStorageKey) //Output: Value
+//localStorage.removeItem("Car") // removeItem ile key ismi verilerek storage silinebilir
+
+let user = { name: "Oğuz", surname: "Köse", isActive: true };
+
+localStorage.setItem("userLocalStorage",user) //local storage set edildi
+
+console.log(localStorage.getItem("userLocalStorage")) // Output: [object Object]
+
+localStorage.setItem("userLocalStorage",JSON.stringify(user)) //Object tipi stringify edildi
+
+console.log(localStorage.getItem("userLocalStorage")) // Output: {"name":"Oğuz","surname":"Köse","isActive":true}
+
+let userInfo = localStorage.getItem("userLocalStorage")
+userInfo= JSON.parse(userInfo) // userInfo Parse edildi
+console.log(userInfo) // Output: {name: "Oğuz", surname: "Köse", isActive: true}
+
