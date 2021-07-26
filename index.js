@@ -187,17 +187,30 @@
 // console.log(localStorageKey) //Output: Value
 //localStorage.removeItem("Car") // removeItem ile key ismi verilerek storage silinebilir
 
-let user = { name: "Oğuz", surname: "Köse", isActive: true };
 
-localStorage.setItem("userLocalStorage",user) //local storage set edildi
+/************************JSON.stringify() - JSON.parse() ***************/
 
-console.log(localStorage.getItem("userLocalStorage")) // Output: [object Object]
+// let user = { name: "Oğuz", surname: "Köse", isActive: true };
 
-localStorage.setItem("userLocalStorage",JSON.stringify(user)) //Object tipi stringify edildi
+// localStorage.setItem("userLocalStorage",user) //local storage set edildi
 
-console.log(localStorage.getItem("userLocalStorage")) // Output: {"name":"Oğuz","surname":"Köse","isActive":true}
+// console.log(localStorage.getItem("userLocalStorage")) // Output: [object Object]
 
-let userInfo = localStorage.getItem("userLocalStorage")
-userInfo= JSON.parse(userInfo) // userInfo Parse edildi
-console.log(userInfo) // Output: {name: "Oğuz", surname: "Köse", isActive: true}
+// localStorage.setItem("userLocalStorage",JSON.stringify(user)) //Object tipi stringify edildi
 
+// console.log(localStorage.getItem("userLocalStorage")) // Output: {"name":"Oğuz","surname":"Köse","isActive":true}
+
+// let userInfo = localStorage.getItem("userLocalStorage")
+// userInfo= JSON.parse(userInfo) // userInfo Parse edildi
+// console.log(userInfo) // Output: {name: "Oğuz", surname: "Köse", isActive: true}
+
+/**************FORM-SUBMIT****************** */ 
+
+// let formDOM = document.querySelector("#userForm") // form'u yakaladım
+// formDOM.addEventListener("submit",submitForm) //form'a submit event'i atadım
+
+
+// function submitForm(event) {
+//   event.preventDefault(); // GET metotun defaultta yapacağı işlem engellendi
+//   console.log(`${content} gönderildi`)
+// }

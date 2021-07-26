@@ -379,3 +379,30 @@ Js
     console.log(userInfo) // Output: {name: "Oğuz", surname: "Köse", isActive: true}
 
 ```
+## FORM ,FORM SUBMIT MANAGEMENT
+Html
+
+```Html
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-8">
+                <form id="userForm">
+                    <input type="number" name="score" id="score">
+                    <button type="submit" class="btn btn-success">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+```
+Js
+
+```JS
+    let formDOM = document.querySelector("#userForm") // form'u yakaladım
+    formDOM.addEventListener("submit",submitForm) //form'a submit event'i atadım
+    
+    function submitForm(event) {
+      event.preventDefault(); // GET metotun defaultta yapacağı işlem engellendi
+      console.log(`${content} gönderildi`)
+    }
+
+```
